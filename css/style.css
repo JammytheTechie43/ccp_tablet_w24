@@ -1,0 +1,108 @@
+.skip-to-content {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-to-content:focus {
+    position: static;
+    left: auto;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+h1{
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+h2{
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    color: #0e12ff;
+}
+
+h3{
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    color: #4f0606;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+nav a.active {
+    border-bottom: 2px solid yellow;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 760px) {
+    main {
+        grid-template-columns: (2, 1fr);
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    nav a {
+        padding: 15px 20px;
+        font-size: 20px;
+    }
+
+    nav a:hover {
+        background-color: #555;
+        color: #fff;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    img:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+}
